@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <ImageView
+        android:id="@+id/red"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="210dp"
+        android:src="@drawable/red"
+        tools:layout_editor_absoluteX="203dp"
+        tools:layout_editor_absoluteY="209dp" />
+    <ImageView
+        android:id="@+id/blue"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="210dp"
+        android:layout_marginLeft="200dp"
+        android:src="@drawable/blue"
+        tools:layout_editor_absoluteX="203dp"
+        tools:layout_editor_absoluteY="315dp" />
+    <ImageView
+        android:id="@+id/green"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="320dp"
+        android:src="@drawable/green"
+        tools:layout_editor_absoluteX="3dp"
+        tools:layout_editor_absoluteY="315dp" />
+
+    <ImageView
+        android:id="@+id/yellow"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="320dp"
+        android:layout_marginLeft="200dp"
+        android:src="@drawable/yellow"
+        tools:layout_editor_absoluteX="203dp"
+        tools:layout_editor_absoluteY="315dp" />
+
+    <TextView
+        android:layout_width="149dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="170dp"
+        android:layout_marginLeft="20dp"
+        android:text="Create New"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="159dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="170dp"
+        android:layout_marginLeft="320dp"
+        android:textSize="20dp"
+        android:text="Drafts >"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="328dp"
+        tools:layout_editor_absoluteY="159dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="300dp"
+        android:text="FREE TRIAL"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="321dp"
+        tools:layout_editor_absoluteY="32dp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="146dp"
+        android:layout_height="102dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="80dp"
+        android:text="PhotoGrid"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="71dp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="450dp"
+        android:layout_marginLeft="20dp"
+        android:text="GlitterRain"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="437dp" />
+
+    <ImageView
+        android:id="@+id/glitter"
+        android:layout_width="1000dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="490dp"
+        android:layout_marginLeft="20dp"
+        android:src="@drawable/glitter"
+        tools:layout_editor_absoluteX="55dp"
+        tools:layout_editor_absoluteY="485dp" />
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="650dp"
+        android:src="@drawable/shop"
+        tools:layout_editor_absoluteX="35dp"
+        tools:layout_editor_absoluteY="665dp" />
+
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="650dp"
+        android:layout_marginLeft="170dp"
+        android:src="@drawable/camera"
+        tools:layout_editor_absoluteX="180dp"
+        tools:layout_editor_absoluteY="665dp"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="650dp"
+        android:layout_marginLeft="310dp"
+        android:src="@drawable/people"
+        tools:layout_editor_absoluteX="328dp"
+        tools:layout_editor_absoluteY="665dp" />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/features"
+        tools:layout_editor_absoluteX="30dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+</RelativeLayout>
