@@ -1,44 +1,37 @@
-package com.example.sharereferen
-
-import android.content.Context
+package com.example.intentassgn
 import android.content.Intent
-import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Toast
-import kotlinx.android.synthetic.main.activity_main.*
-
+import android.provider.AlarmClock
+import android.provider.Settings
+import androidx.core.content.ContextCompat.startActivity
 class MainActivity : AppCompatActivity() {
-
-    lateinit var sharedPreferences: SharedPreferences
-    var isRemembered = false
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        sharedPreferences = getSharedPreferences("SHARED_REF",Context.MODE_PRIVATE)
-        isRemembered = sharedPreferences.getBoolean("CHECKBOX",false)
 
-        if(isRemembered){
-            val intent = Intent(this,anther::class.java)
-            startActivity(intent)
-            finish()
-        }
-        login.setOnClickListener{
-            val name:String=name.text.toString()
-            val age:Int=age.text.toString().toInt()
-            val check:Boolean=check.isChecked
-            val prefs=getSharedPreferences("SHARED_REF", MODE_PRIVATE)
-            val editor =prefs.edit()
-            editor.putString("Name",name)
-            editor.putInt("Age",age)
-            editor.putBoolean("check",check)
-                editor.apply()
-            Toast.makeText(this,"information safe", Toast.LENGTH_SHORT).show()
+        val intent = Intent(Intent.ACTION_SEND);
+        intent.setType("text/html");
+        intent.putExtra(Intent.EXTRA_EMAIL, "emailaddress@emailaddress.com");
+        intent.putExtra(Intent.EXTRA_SUBJECT, "Subject");
+        intent.putExtra(Intent.EXTRA_TEXT, "I'm email body.");
 
-            val intent = Intent(this,anther::class.java)
-            startActivity(intent)
-            finish()
-        }
+        startActivity(Intent.createChooser(intent, "Send Email"));
+    }
 
+
+    val intent = Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
+    intent.data = Uri.parse("package:" + context.packageName)
+    startActivity(intent)
+}
+fun createAlarm(message: String, hour: Int, minutes: Int) {
+    val intent = Intent(AlarmClock.ACTION_SET_ALARM).apply {
+        putExtra(AlarmClock.EXTRA_MESSAGE, message)
+        putExtra(AlarmClock.EXTRA_HOUR, hour)
+        putExtra(AlarmClock.EXTRA_MINUTES, minutes)
+    }
+    if (intent.resolveActivity(packageManager) != null) {
+        startActivity(intent)
     }
 }
+
